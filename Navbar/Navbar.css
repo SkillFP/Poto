@@ -1,0 +1,74 @@
+body{
+    background-image: url(fondo.jpg);
+    background-size: auto;
+}
+
+/* logo de la página */
+.Logo{
+text-align: center;
+}
+
+/* decoración de las anclas */
+
+.anclas1{
+    background-image: url("Nav1.png");
+    padding: 20px 60px;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+}
+
+/* efecto de hover en las anclas */
+
+.anclas1:hover{
+    background-image: url(hover1.png);
+}
+
+/* efecto de activar las anclas */
+
+.anclas1:active{
+    background-color: blanchedalmond;
+    box-shadow: 2px 2px rgb(243, 146, 82) inset;
+}
+
+/* convierte en flexible el ancla y justifica el contenido (centrado) */
+
+nav{
+    display: flex;
+    justify-content: center;
+}
+
+.botonnav{
+    background-image: url(Nav1.png);
+    padding: 20px 60px;
+    border: 2px solid rgb(243, 146, 82);
+    display: none;
+}
+
+/* media query (@media) se utiliza para hacer excepciones utilizando como referencia las características del dispositivo que ejecuta la página.
+En este caso, marco como máximos los 860px de ancho para que los botones de la navbar se pongan de lado si no se alcanza el tamaño en cuestión. */
+
+@media (max-width: 860px) {
+    nav{
+        flex-direction: column;
+    }
+
+    .anclas1{
+        margin: 5px;
+    }
+
+    .botonnav{
+        display: inline-block;
+    }
+
+    .ocultar{
+        display: none;
+    }
+
+    body{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: 860px 1080px;
+    }
+}

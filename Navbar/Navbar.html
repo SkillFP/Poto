@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar NieR</title>
+    <link rel="stylesheet" href="Navbar.css">
+</head>
+<body>
+
+<!-- Los comentarios siempre se refieren a los elementos debajo de ellos -->
+
+<!-- <p> se utiliza para tratar al logo como un párrafo, luego lo centro como si fuera texto aunque tenga una imagen en css en la class=Logo -->
+    <p class="Logo" >
+        <img src="Logo.png" alt="NieR Logo">
+    </p>
+
+    <!-- Fondo -->
+    
+
+    <!-- <nav> es la barra en si misma, <a> son las anclas (cada palabra) -->
+    <nav>
+        <button class="botonnav" onclick="accion()">Menú</button>
+        <a href="#" class="anclas1 ocultar">Inicio</a>
+        <a href="#" class="anclas1 ocultar">Historia</a>
+        <a href="#" class="anclas1 ocultar">Personajes</a>
+        <a href="#" class="anclas1 ocultar">Localizaciones</a>
+    </nav>
+
+    <script>
+        function accion(){
+            console.log('poto')
+            var ancla = document.getElementsByClassName('anclas1');
+            for(var i = 0; i < ancla.length; i++)
+            {
+                ancla[i].classList.toggle('ocultar')
+            }
+        }
+    </script>
+</body>
+</html>
